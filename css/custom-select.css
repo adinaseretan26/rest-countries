@@ -1,0 +1,64 @@
+.custom-select {
+  position: relative;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: rgba(199, 93, 93, 0.623);
+  box-shadow: 10px 5px 5px rgba(63, 63, 63, 0.123);
+  border-radius: 0.25rem;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 17px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: rgb(63, 63, 63) transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent rgb(63, 63, 63) transparent;
+  top: 14px;
+}
+
+.select-items div,
+.select-selected {
+  color: rgb(63, 63, 63);
+  padding: 10px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.select-items {
+  margin-top: 5px;
+  font-weight: bold;
+  position: absolute;
+  background-color: rgba(199, 93, 93, 0.623);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: 10px 5px 5px rgba(63, 63, 63, 0.123);
+  border-radius: 0.25rem;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+}

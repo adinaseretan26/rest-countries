@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(63, 63, 63);
+  font-size: 16px;
+  padding: 20px 60px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(199, 93, 93, 0.623);
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.content {
+  margin: 40px auto;
+  width: 100%;
+}
+
+.filter-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content a {
+  text-decoration-line: none;
+  font-size: 25px;
+  color: rgb(63, 63, 63);
+}
+
+.error-msg {
+  font-size: 25px;
+  margin-top: 20px;
+  padding: 100px;
+  text-align: center;
+  display: none;
+}
+
+.content-sct {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.card {
+  border-radius: 0.25rem;
+  background-color: rgba(199, 93, 93, 0.623);
+  /* overflow: hidden; */
+  box-shadow: 0 4px 6px -1 rgba(0, 0, 0, 0.1), 0 2px 4px -1 rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.25rem;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-content h3 {
+  margin-bottom: 8px;
+}
+
+.img {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 50px;
+}
+
+.search-bar {
+  background-color: rgba(199, 93, 93, 0.623);
+  box-shadow: 10px 5px 5px rgba(63, 63, 63, 0.123);
+  border-radius: 0.25rem;
+  padding: 10px;
+}
+
+.search-bar input {
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  background-color: rgba(63, 63, 63, 0.001);
+  color: rgb(63, 63, 63);
+  font-size: 16px;
+}
+
+@media (max-width: 850px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-content {
+    font-size: 20px;
+  }
+
+  .filter-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar input {
+    width: 80%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
